@@ -1,0 +1,12 @@
+<template>
+    <lightning-card variant="base">
+        <div class="slds-var-m-left_small slds-var-m-right_large">
+            <template for:each={data} for:item="item">
+                <lightning-tile key={item.Id} label={item.Name} href={item.oppId} actions={actions}
+                    onactiontriggered={handleAction}>
+                    <p class="slds-truncate" title="10 Cases">{item.oppStage}</p>
+                </lightning-tile>
+            </template>
+        </div>
+    </lightning-card>
+</template>
